@@ -1,0 +1,9 @@
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\bin\Debug\GibPacker.exe.config
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\bin\Debug\GibPacker.exe
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\bin\Debug\GibPacker.pdb
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.MainForm.resources
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.Properties.Resources.resources
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.csproj.GenerateResource.Cache
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.exe
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.pdb
