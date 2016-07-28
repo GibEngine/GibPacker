@@ -33,12 +33,15 @@
       this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.newManifestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-      this.mainContainer = new System.Windows.Forms.SplitContainer();
-      this.treeViewFileList = new System.Windows.Forms.TreeView();
       this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.addFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.addFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.packToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
       this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+      this.mainContainer = new System.Windows.Forms.SplitContainer();
+      this.treeViewFileList = new System.Windows.Forms.TreeView();
+      this.statusStrip1 = new System.Windows.Forms.StatusStrip();
       this.menuStrip.SuspendLayout();
       ((System.ComponentModel.ISupportInitialize)(this.mainContainer)).BeginInit();
       this.mainContainer.Panel1.SuspendLayout();
@@ -74,6 +77,7 @@
       this.newManifestToolStripMenuItem.Name = "newManifestToolStripMenuItem";
       this.newManifestToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
       this.newManifestToolStripMenuItem.Text = "New Manifest";
+      this.newManifestToolStripMenuItem.Click += new System.EventHandler(this.newManifestToolStripMenuItem_Click);
       // 
       // openToolStripMenuItem
       // 
@@ -81,11 +85,47 @@
       this.openToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
       this.openToolStripMenuItem.Text = "Open Manifest";
       // 
+      // addToolStripMenuItem
+      // 
+      this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addFileToolStripMenuItem,
+            this.addFolderToolStripMenuItem});
+      this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+      this.addToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
+      this.addToolStripMenuItem.Text = "Add...";
+      // 
+      // addFileToolStripMenuItem
+      // 
+      this.addFileToolStripMenuItem.Name = "addFileToolStripMenuItem";
+      this.addFileToolStripMenuItem.Size = new System.Drawing.Size(147, 30);
+      this.addFileToolStripMenuItem.Text = "File";
+      this.addFileToolStripMenuItem.Click += new System.EventHandler(this.addFileToolStripMenuItem_Click);
+      // 
+      // addFolderToolStripMenuItem
+      // 
+      this.addFolderToolStripMenuItem.Name = "addFolderToolStripMenuItem";
+      this.addFolderToolStripMenuItem.Size = new System.Drawing.Size(147, 30);
+      this.addFolderToolStripMenuItem.Text = "Folder";
+      this.addFolderToolStripMenuItem.Click += new System.EventHandler(this.addFolderToolStripMenuItem_Click);
+      // 
       // exitToolStripMenuItem
       // 
       this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
       this.exitToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
       this.exitToolStripMenuItem.Text = "Exit";
+      // 
+      // packToolStripMenuItem
+      // 
+      this.packToolStripMenuItem.Name = "packToolStripMenuItem";
+      this.packToolStripMenuItem.Size = new System.Drawing.Size(59, 29);
+      this.packToolStripMenuItem.Text = "Pack";
+      // 
+      // aboutToolStripMenuItem
+      // 
+      this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+      this.aboutToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+      this.aboutToolStripMenuItem.Text = "About";
+      this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
       // 
       // mainContainer
       // 
@@ -108,36 +148,27 @@
       this.treeViewFileList.Size = new System.Drawing.Size(400, 846);
       this.treeViewFileList.TabIndex = 0;
       // 
-      // addToolStripMenuItem
+      // statusStrip1
       // 
-      this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-      this.addToolStripMenuItem.Size = new System.Drawing.Size(214, 30);
-      this.addToolStripMenuItem.Text = "Add...";
-      // 
-      // packToolStripMenuItem
-      // 
-      this.packToolStripMenuItem.Name = "packToolStripMenuItem";
-      this.packToolStripMenuItem.Size = new System.Drawing.Size(59, 29);
-      this.packToolStripMenuItem.Text = "Pack";
-      // 
-      // aboutToolStripMenuItem
-      // 
-      this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-      this.aboutToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
-      this.aboutToolStripMenuItem.Text = "About";
+      this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+      this.statusStrip1.Location = new System.Drawing.Point(0, 857);
+      this.statusStrip1.Name = "statusStrip1";
+      this.statusStrip1.Size = new System.Drawing.Size(1585, 22);
+      this.statusStrip1.TabIndex = 0;
+      this.statusStrip1.Text = "statusStrip1";
       // 
       // MainForm
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(1585, 879);
+      this.Controls.Add(this.statusStrip1);
       this.Controls.Add(this.mainContainer);
       this.Controls.Add(this.menuStrip);
       this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
       this.MainMenuStrip = this.menuStrip;
       this.Name = "MainForm";
       this.Text = "GibPacker";
-      this.Load += new System.EventHandler(this.Form1_Load);
       this.menuStrip.ResumeLayout(false);
       this.menuStrip.PerformLayout();
       this.mainContainer.Panel1.ResumeLayout(false);
@@ -160,6 +191,9 @@
     private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem packToolStripMenuItem;
     private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem addFileToolStripMenuItem;
+    private System.Windows.Forms.ToolStripMenuItem addFolderToolStripMenuItem;
+    private System.Windows.Forms.StatusStrip statusStrip1;
   }
 }
 

@@ -7,3 +7,5 @@ d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker
 d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.csproj.GenerateResource.Cache
 d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.exe
 d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.pdb
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\bin\Debug\ICSharpCode.SharpZipLib.dll
+d:\documents\visual studio 2015\Projects\GibPacker\GibPacker\obj\Debug\GibPacker.AboutForm.resources
